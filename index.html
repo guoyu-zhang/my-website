@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <ul class="navbar__menu">
+        <li>
+          <a
+            class="navbar__menu__item navbar__menu__item--selected"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a class="navbar__menu__item" href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a class="navbar__menu__item" href="blog.html">Blog</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero__container">
+        <div class="hero__left">
+          <img
+            src="assets/images/portrait2.jpeg  "
+            height="400px"
+            alt="Guoyu Zhang"
+          />
+          <hr class="hero__left__line" />
+          <ul class="icon__list">
+            <li class="icon__list__item">
+              <a href="https://uk.linkedin.com/in/guoyu-zhang-1528b2175">
+                <img
+                  src="assets/images/linkedin.svg"
+                  height="35px"
+                  alt="LinkedIn"
+                />
+              </a>
+            </li>
+            <li class="icon__list__item">
+              <a href="https://github.com/guoyu-zhang">
+                <img
+                  src="assets/images/github.svg"
+                  height="35px"
+                  alt="Github"
+                />
+              </a>
+            </li>
+            <li class="icon__list__item">
+              <a href="" target="_blank">
+                <img src="assets/images/mail.png" height="35px" alt="Email" />
+              </a>
+            </li>
+            <li class="icon__list__item">
+              <a href="" target="_blank">
+                <img src="assets/images/CV.svg" height="35px" alt="CV" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__right">
+          <h1 class="greeting">
+            <span class="auto__type"></span> <br />
+            My name is Guoyu.
+          </h1>
+          <p class="description">
+            I'm a Computer Science student at
+            <a
+              class="description__link description__link--UOE"
+              href="https://www.ed.ac.uk"
+              >The University of Edinburgh</a
+            >
+            and Software Engineering Intern at
+            <a
+              class="description__link description__link--M2M"
+              href="https://marktomarket.io"
+              >MarktoMarket</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">© 2022 Guoyu Zhang</footer>
+
+    <!-- Script  -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto__type", {
+        strings: [
+          "Hello!",
+          "你好!",
+          "Bonjour!",
+          "!مرحبا",
+          "здороваться!",
+          "안녕하세요!",
+          "Hola!",
+          "नमस्ते!",
+          "Ciao!",
+          "Hallo!",
+        ],
+        typeSpeed: 170,
+        backSpeed: 170,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>

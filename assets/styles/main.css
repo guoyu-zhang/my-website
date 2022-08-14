@@ -20,7 +20,7 @@ footer {
   font-size: 16px;
   line-height: 19px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 450px) {
   footer {
     margin-left: 30px;
   }
@@ -39,11 +39,6 @@ a {
   display: flex;
   justify-content: flex-end;
 }
-@media only screen and (max-width: 768px) {
-  .navbar {
-    justify-content: center;
-  }
-}
 @media only screen and (max-width: 1000px) {
   .navbar {
     justify-content: center;
@@ -56,11 +51,6 @@ a {
   margin-top: 50px;
   margin-right: 70px;
   padding: 0;
-}
-@media only screen and (max-width: 768px) {
-  .navbar__menu {
-    margin-right: 0;
-  }
 }
 @media only screen and (max-width: 1000px) {
   .navbar__menu {
@@ -101,7 +91,7 @@ a {
   margin: 100px 0px;
   justify-content: center;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .hero {
     margin-top: 50px;
   }
@@ -111,13 +101,6 @@ a {
   justify-content: space-evenly;
   width: 66%;
   min-width: 1000px;
-}
-@media only screen and (max-width: 768px) {
-  .hero__container {
-    flex-direction: column-reverse;
-    width: auto;
-    min-width: 0;
-  }
 }
 @media only screen and (max-width: 1000px) {
   .hero__container {
@@ -156,15 +139,6 @@ a {
   flex-direction: column;
   justify-content: flex-end;
 }
-@media only screen and (max-width: 768px) {
-  .hero__right {
-    height: auto;
-    min-width: 0;
-    max-width: 350px;
-    width: 100%;
-    text-align: center;
-  }
-}
 @media only screen and (max-width: 1000px) {
   .hero__right {
     height: auto;
@@ -184,6 +158,12 @@ a {
   font-size: 28px;
   line-height: 38px;
   margin: 0;
+}
+@media only screen and (max-width: 450px) {
+  .hero__right .description {
+    min-width: 350px;
+    padding: 10px;
+  }
 }
 .hero__right .description__link {
   display: inline-block;

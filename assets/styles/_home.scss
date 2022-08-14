@@ -21,6 +21,7 @@ footer {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
+
   @include mobile {
     margin-left: 30px;
   }
@@ -38,9 +39,6 @@ a {
 .navbar {
   display: flex;
   justify-content: flex-end;
-  @include mobile {
-    justify-content: center;
-  }
 
   @include tablet {
     justify-content: center;
@@ -53,10 +51,6 @@ a {
     margin-top: 50px;
     margin-right: 70px;
     padding: 0;
-
-    @include mobile {
-      margin-right: 0;
-    }
 
     @include tablet {
       margin-right: 0;
@@ -103,7 +97,7 @@ a {
   margin: 100px 0px;
   justify-content: center;
 
-  @include mobile {
+  @include tablet {
     margin-top: 50px;
   }
 
@@ -112,12 +106,6 @@ a {
     justify-content: space-evenly;
     width: 66%;
     min-width: 1000px;
-
-    @include mobile {
-      flex-direction: column-reverse;
-      width: auto;
-      min-width: 0;
-    }
 
     @include tablet {
       flex-direction: column-reverse;
@@ -161,14 +149,6 @@ a {
     flex-direction: column;
     justify-content: flex-end;
 
-    @include mobile {
-      height: auto;
-      min-width: 0;
-      max-width: 350px;
-      width: 100%;
-      text-align: center;
-    }
-
     @include tablet {
       height: auto;
       min-width: 0;
@@ -188,6 +168,11 @@ a {
       font-size: 28px;
       line-height: 38px;
       margin: 0;
+
+      @include mobile {
+        min-width: 350px;
+        padding: 10px;
+      }
 
       &__link {
         display: inline-block;

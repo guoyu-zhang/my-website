@@ -11,6 +11,7 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
+  min-width: 350px;
 }
 
 footer {
@@ -20,6 +21,9 @@ footer {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
+  @include mobile {
+    margin-left: 30px;
+  }
 }
 
 * ul {
@@ -91,13 +95,20 @@ a {
   margin: 100px 0px;
   justify-content: center;
 
+  @include mobile {
+    margin-top: 50px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-evenly;
     width: 66%;
+    min-width: 1000px;
 
     @include mobile {
       flex-direction: column-reverse;
+      width: auto;
+      min-width: 0;
     }
   }
 
@@ -131,14 +142,17 @@ a {
     width: 30%;
     min-width: 410px;
     height: 400px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     @include mobile {
       height: auto;
-      min-width: none;
+      min-width: 0;
+      max-width: 350px;
       width: 100%;
+      text-align: center;
     }
     .greeting {
       font-weight: 400;

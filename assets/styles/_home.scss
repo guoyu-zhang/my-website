@@ -1,3 +1,5 @@
+@import "media-queries";
+
 * {
   font-family: "Roboto Mono", sans-serif;
   font-style: normal;
@@ -32,13 +34,21 @@ a {
 .navbar {
   display: flex;
   justify-content: flex-end;
+  @include mobile {
+    justify-content: center;
+  }
 
   &__menu {
     display: flex;
-    width: 250px;
+    min-width: 250px;
     justify-content: space-between;
     margin-top: 50px;
     margin-right: 70px;
+    padding: 0;
+
+    @include mobile {
+      margin-right: 0;
+    }
 
     &__item {
       display: inline-block;
@@ -85,9 +95,16 @@ a {
     display: flex;
     justify-content: space-evenly;
     width: 66%;
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
   }
 
   &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__line {
       margin-top: 50px;
       margin-bottom: 50px;
@@ -100,8 +117,10 @@ a {
 
     .icon__list {
       display: flex;
-      justify-content: space-evenly;
+      width: 300px;
       padding: 0;
+      margin: 0;
+      justify-content: space-evenly;
 
       &__item {
       }
@@ -115,6 +134,12 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @include mobile {
+      height: auto;
+      min-width: none;
+      width: 100%;
+    }
     .greeting {
       font-weight: 400;
       font-size: 32px;

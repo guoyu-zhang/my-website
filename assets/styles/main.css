@@ -1,8 +1,5 @@
-/* Extra small devices (phones, 600px and down) */
-/* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
-/* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
 * {
   font-family: "Roboto Mono", sans-serif;
   font-style: normal;
@@ -38,12 +35,23 @@ a {
   display: flex;
   justify-content: flex-end;
 }
+@media only screen and (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+}
 .navbar__menu {
   display: flex;
-  width: 250px;
+  min-width: 250px;
   justify-content: space-between;
   margin-top: 50px;
   margin-right: 70px;
+  padding: 0;
+}
+@media only screen and (max-width: 768px) {
+  .navbar__menu {
+    margin-right: 0;
+  }
 }
 .navbar__menu__item {
   display: inline-block;
@@ -84,6 +92,16 @@ a {
   justify-content: space-evenly;
   width: 66%;
 }
+@media only screen and (max-width: 768px) {
+  .hero__container {
+    flex-direction: column-reverse;
+  }
+}
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .hero__left__line {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -95,8 +113,10 @@ a {
 }
 .hero__left .icon__list {
   display: flex;
-  justify-content: space-evenly;
+  width: 300px;
   padding: 0;
+  margin: 0;
+  justify-content: space-evenly;
 }
 .hero__right {
   width: 30%;
@@ -105,6 +125,13 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+@media only screen and (max-width: 768px) {
+  .hero__right {
+    height: auto;
+    min-width: none;
+    width: 100%;
+  }
 }
 .hero__right .greeting {
   font-weight: 400;

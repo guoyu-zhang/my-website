@@ -42,6 +42,10 @@ a {
     justify-content: center;
   }
 
+  @include tablet {
+    justify-content: center;
+  }
+
   &__menu {
     display: flex;
     min-width: 250px;
@@ -51,6 +55,10 @@ a {
     padding: 0;
 
     @include mobile {
+      margin-right: 0;
+    }
+
+    @include tablet {
       margin-right: 0;
     }
 
@@ -110,6 +118,12 @@ a {
       width: auto;
       min-width: 0;
     }
+
+    @include tablet {
+      flex-direction: column-reverse;
+      width: auto;
+      min-width: 0;
+    }
   }
 
   &__left {
@@ -154,11 +168,21 @@ a {
       width: 100%;
       text-align: center;
     }
+
+    @include tablet {
+      height: auto;
+      min-width: 0;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
     .greeting {
       font-weight: 400;
       font-size: 32px;
       line-height: 42px;
     }
+
     .description {
       font-weight: 300;
       font-size: 28px;

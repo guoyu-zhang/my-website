@@ -1,34 +1,11 @@
-// /* Extra small devices (phones, 600px and down) */
-// @mixin device-xs {
-//   @media only screen and (max-width: 576px) {
-//     @content;
-//   }
-// }
-
-// /* Small devices (portrait tablets and large phones, 600px and up) */
-// @mixin device-s {
-//   @media only screen and (min-width: 576px) {
-//     @content;
-//   }
-// }
-
-/* Medium devices (landscape tablets, 768px and up) */
 @mixin mobile {
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 768px) {
     @content;
   }
 }
 
-// /* Large devices (laptops/desktops, 992px and up) */
-// @mixin device-l {
-//   @media only screen and (min-width: 992px) {
-//     @content;
-//   }
-// }
-
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @mixin device-xl {
-//   @media only screen and (min-width: 1200px) {
-//     @content;
-//   }
-// }
+@mixin tablet {
+  @media only screen and (max-width: 1000px) {
+    @content;
+  }
+}

@@ -5,27 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script
+      src="./assets/components/navbar.js"
+      type="text/javascript"
+      defer
+    ></script>
     <title>Home</title>
   </head>
   <body>
     <!-- Navbar Section -->
-    <nav class="navbar">
-      <ul class="navbar__menu">
-        <li>
-          <a
-            class="navbar__menu__item navbar__menu__item--selected"
-            href="index.html"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a class="navbar__menu__item" href="projects.html">Projects</a>
-        </li>
-        <li>
-          <a class="navbar__menu__item" href="blog.html">Blog</a>
-        </li>
-      </ul>
-    </nav>
+    <navbar-component></navbar-component>
 
     <!-- Hero Section -->
     <div class="hero">
@@ -102,7 +92,7 @@
     <!-- Footer Section -->
     <footer class="footer">© 2022 Guoyu Zhang</footer>
 
-    <!-- Script  -->
+    <!-- Scripts  -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var typed = new Typed(".auto__type", {

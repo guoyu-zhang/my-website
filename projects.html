@@ -10,16 +10,54 @@
       type="text/javascript"
       defer
     ></script>
-    <title>Projects</title>
+    <script
+      src="./assets/components/project.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <title>Projects | Guoyu Zhang</title>
   </head>
   <body>
     <!-- Navbar Section -->
-    <navbar-component></navbar-component>
+    <navbar-component path="projects"></navbar-component>
 
     <!-- Main Section -->
-    <div>
-      <h1>This is my projects</h1>
+    <div class="projects">
+      <div class="projects__container">
+        <div class="projects__top">
+          <h1>Projects</h1>
+          <p class="projects__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+            fugit tempore solu
+          </p>
+        </div>
+        <div>
+          <!-- <project-component
+            title="Project 1"
+            image="./assets/images/mail.png"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+          fugit tempore soluta deserunt eaque perferendis non ea similique
+          voluptatum nostrum molestiae quos accusamus necessitatibus hic. Modi
+          non at ipsam. Neque!"
+          ></project-component> -->
+        </div>
+
+        <div class="project">
+          <img
+            class="project_image"
+            src="./assets/images/pizza-hut-website.png"
+            alt="mail"
+          />
+          <div class="project_title">Project 1</div>
+          <p class="project_description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores,
+            cumque debitis labore reprehenderit voluptatibus nihil consectetur
+            ex, non at
+          </p>
+        </div>
+      </div>
     </div>
+
     <!-- Footer Section -->
     <footer class="footer">© 2022 Guoyu Zhang</footer>
   </body>

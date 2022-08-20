@@ -28,7 +28,7 @@
 .hero__left__line {
   margin-top: 50px;
   margin-bottom: 50px;
-  height: 2px;
+  height: 1px;
   width: 150px;
   border-width: 0;
   color: black;
@@ -179,7 +179,7 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   z-index: -10;
   transform: scaleX(0);
   background-color: #000;
@@ -221,7 +221,7 @@ h1 {
   margin-bottom: 50px;
 }
 .projects__container .projects__top .projects__description {
-  width: 800px;
+  max-width: 700px;
   font-size: 28px;
   font-weight: 300;
   line-height: 38px;
@@ -229,28 +229,62 @@ h1 {
   text-align: center;
 }
 
-.project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 480px;
-  min-width: 330px;
-  max-width: 430px;
-  background: rgb(245, 245, 245);
-}
-.project_image {
-  width: 300px;
-  height: 300px;
-}
-.project_title {
-  font-size: 18px;
-  font-weight: 250;
-  margin-bottom: 20px;
-}
-.project_description {
-  font-size: 20px;
+.summary {
+  border-left: 1px solid;
+  padding-left: 15px;
   font-weight: 300;
-  margin-bottom: 20px;
+  display: flex;
+  font-size: 20px;
+  line-height: 25px;
+  min-height: 100px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 1000px) {
+  .summary {
+    flex-direction: column;
+    width: auto;
+  }
+}
+.summary__title {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 38px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.summary__title__link {
+  display: inline-block;
+  position: relative;
+}
+.summary__title__link::after, .summary__title__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.5em;
+  z-index: -10;
+  background-color: rgb(221, 221, 221);
+}
+.summary__title__link::after {
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.7s ease-in-out;
+}
+.summary__title__link:hover::after {
+  transform: scaleX(1);
+}
+.summary__title__link--UOE::after {
+  background-color: rgb(66, 154, 255);
+}
+.summary__title__link--M2M::after {
+  background-color: rgb(88, 88, 88);
+}
+.summary__description {
+  margin: 0;
 }
 
 .blog {

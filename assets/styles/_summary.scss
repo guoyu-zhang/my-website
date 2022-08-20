@@ -1,0 +1,110 @@
+.summary {
+  border-left: 1px solid;
+  padding-left: 15px;
+  font-weight: 300;
+  display: flex;
+  font-size: 20px;
+  line-height: 25px;
+  min-height: 100px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-bottom: 50px;
+
+  @include tablet {
+    flex-direction: column;
+    width: auto;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 38px;
+    margin: 0;
+    margin-bottom: 30px;
+
+    &__link {
+      display: inline-block;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0.5em;
+        z-index: -10;
+        background-color: rgb(221, 221, 221);
+      }
+
+      &::after {
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform 0.7s ease-in-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      &--UOE::after {
+        background-color: rgb(66, 154, 255);
+      }
+
+      &--M2M::after {
+        background-color: rgb(88, 88, 88);
+      }
+    }
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  // Page Style Two
+
+  // &__image {
+  //   width: 400px;
+  // }
+
+  // &__line {
+  //   height: 2px;
+  //   width: 98px;
+  //   border-width: 0;
+  //   color: black;
+  //   background-color: black;
+  //   transform: rotate(90deg);
+
+  //   @include tablet {
+  //     transform: none;
+  //     margin: 50px 0px;
+  //   }
+  // }
+
+  // &__text {
+  //   border-left: 1px solid;
+  //   padding-left: 15px;
+  //   font-weight: 300;
+  //   display: flex;
+  //   font-size: 20px;
+  //   line-height: 25px;
+  //   height: 100%;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+
+  //   @include tablet {
+  //     text-align: center;
+  //   }
+
+  //   .title {
+  //     font-size: 28px;
+  //   }
+
+  //   .icons {
+  //     display: flex;
+  //     justify-content: space-between;
+  //   }
+  // }
+}

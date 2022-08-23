@@ -1,6 +1,5 @@
 .summary {
   border-left: 1px solid;
-  padding-left: 15px;
   font-weight: 300;
   display: flex;
   font-size: 20px;
@@ -8,12 +7,17 @@
   min-height: 100px;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 15px;
-  margin-bottom: 50px;
+  padding-left: 15px;
+  margin: 100px 0px 100px 15px;
 
   @include tablet {
     flex-direction: column;
     width: auto;
+    margin: 80px 50px 80px 50px;
+  }
+
+  @include mobile {
+    margin: 60px 10px 60px 20px;
   }
 
   &__title {
@@ -42,7 +46,7 @@
       &::after {
         transform: scaleX(0);
         transform-origin: 0 50%;
-        transition: transform 0.7s ease-in-out;
+        transition: transform 0.5s ease-in-out;
       }
 
       &:hover::after {
@@ -62,49 +66,4 @@
   &__description {
     margin: 0;
   }
-
-  // Page Style Two
-
-  // &__image {
-  //   width: 400px;
-  // }
-
-  // &__line {
-  //   height: 2px;
-  //   width: 98px;
-  //   border-width: 0;
-  //   color: black;
-  //   background-color: black;
-  //   transform: rotate(90deg);
-
-  //   @include tablet {
-  //     transform: none;
-  //     margin: 50px 0px;
-  //   }
-  // }
-
-  // &__text {
-  //   border-left: 1px solid;
-  //   padding-left: 15px;
-  //   font-weight: 300;
-  //   display: flex;
-  //   font-size: 20px;
-  //   line-height: 25px;
-  //   height: 100%;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-
-  //   @include tablet {
-  //     text-align: center;
-  //   }
-
-  //   .title {
-  //     font-size: 28px;
-  //   }
-
-  //   .icons {
-  //     display: flex;
-  //     justify-content: space-between;
-  //   }
-  // }
 }

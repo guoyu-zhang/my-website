@@ -88,7 +88,7 @@
 .hero__right .description__link::after {
   transform: scaleX(0);
   transform-origin: 0 50%;
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .hero__right .description__link:hover::after {
   transform: scaleX(1);
@@ -147,33 +147,21 @@ h1 {
   display: flex;
   justify-content: flex-end;
 }
-@media only screen and (max-width: 1000px) {
-  .navbar {
-    justify-content: center;
-  }
-}
-.navbar__menu {
-  display: flex;
-  min-width: 250px;
-  justify-content: space-between;
-  margin-top: 50px;
-  margin-right: 70px;
-  padding: 0;
-}
-@media only screen and (max-width: 1000px) {
-  .navbar__menu {
-    margin-right: 0;
-    margin-left: -15px;
-  }
-}
-.navbar__menu__item {
+.navbar__item {
   display: inline-block;
   position: relative;
   font-weight: 300;
   font-size: 20px;
   height: 30px;
+  margin-top: 30px;
+  margin-right: 70px;
 }
-.navbar__menu__item::before {
+@media only screen and (max-width: 450px) {
+  .navbar__item {
+    margin-right: 30px;
+  }
+}
+.navbar__item::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -186,22 +174,22 @@ h1 {
   transform-origin: bottom left;
   transition: transform 0.5s ease-in-out;
 }
-.navbar__menu__item:hover::before {
+.navbar__item:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.navbar__menu__item--selected::before {
+.navbar__item--selected::before {
   background-color: rgb(0, 0, 0);
   transform: none;
 }
 
-.projects {
+.work {
   display: flex;
   margin: 50px 0px;
   flex-direction: column;
   align-items: center;
 }
-.projects__container {
+.work__container {
   display: flex;
   width: 66%;
   min-width: 1000px;
@@ -209,18 +197,18 @@ h1 {
   align-items: center;
 }
 @media only screen and (max-width: 1000px) {
-  .projects__container {
+  .work__container {
     width: auto;
     min-width: 0;
   }
 }
-.projects__container .projects__top {
+.work__container .work__top {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
 }
-.projects__container .projects__top .projects__description {
+.work__container .work__top .work__description {
   max-width: 700px;
   font-size: 28px;
   font-weight: 300;
@@ -231,7 +219,6 @@ h1 {
 
 .summary {
   border-left: 1px solid;
-  padding-left: 15px;
   font-weight: 300;
   display: flex;
   font-size: 20px;
@@ -239,13 +226,19 @@ h1 {
   min-height: 100px;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 15px;
-  margin-bottom: 50px;
+  padding-left: 15px;
+  margin: 100px 0px 100px 15px;
 }
 @media only screen and (max-width: 1000px) {
   .summary {
     flex-direction: column;
     width: auto;
+    margin: 80px 50px 80px 50px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .summary {
+    margin: 60px 10px 60px 20px;
   }
 }
 .summary__title {
@@ -272,7 +265,7 @@ h1 {
 .summary__title__link::after {
   transform: scaleX(0);
   transform-origin: 0 50%;
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .summary__title__link:hover::after {
   transform: scaleX(1);
@@ -285,11 +278,4 @@ h1 {
 }
 .summary__description {
   margin: 0;
-}
-
-.blog {
-  display: flex;
-  margin: 50px 0px;
-  flex-direction: column;
-  align-items: center;
 }/*# sourceMappingURL=main.css.map */

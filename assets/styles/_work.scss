@@ -1,0 +1,35 @@
+.work {
+  display: flex;
+  margin: 50px 0px;
+  flex-direction: column;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    width: 66%;
+    min-width: 1000px;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      width: auto;
+      min-width: 0;
+    }
+
+    .work__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+
+      .work__description {
+        max-width: 700px;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 38px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+  }
+}

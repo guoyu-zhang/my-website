@@ -1,0 +1,24 @@
+.postImg {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 30px;
+  &__image {
+    padding: 2px 4px;
+    display: inline-block;
+    max-height: 450px;
+    @include tablet {
+      justify-content: center;
+      max-width: 430px;
+    }
+
+    @include mobile {
+      justify-content: center;
+      max-width: 380px;
+    }
+  }
+
+  &__text {
+    padding: 2px 4px;
+    display: inline-block;
+  }
+}

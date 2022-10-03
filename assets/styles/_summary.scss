@@ -53,17 +53,30 @@
         transform: scaleX(1);
       }
 
-      &--UOE::after {
-        background-color: rgb(66, 154, 255);
+      &--ILC::after {
+        background-color: rgb(169, 124, 73);
       }
-
-      &--M2M::after {
-        background-color: rgb(88, 88, 88);
+      &--ANS::after {
+        background-color: rgb(255, 248, 123);
+      }
+      &--CNX::after {
+        background-color: rgb(102, 177, 79);
+      }
+      &--CTN::after {
+        background-color: rgb(255, 95, 95);
       }
     }
   }
 
   &__description {
     margin: 0;
+  }
+
+  &__images {
+    padding-top: 20px;
+    &__image {
+      padding-right: 10px;
+      max-height: 100px;
+    }
   }
 }

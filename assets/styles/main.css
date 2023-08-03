@@ -99,6 +99,9 @@
 .hero__right .description__link--M2M::after {
   background-color: rgb(88, 88, 88);
 }
+.hero__right .description__link--ARM::after {
+  background-color: rgb(0, 193, 222);
+}
 
 * {
   font-family: "Roboto Mono", sans-serif;
